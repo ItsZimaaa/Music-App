@@ -1,0 +1,87 @@
+import { CiMicrophoneOn } from "react-icons/ci";
+import { FaApple } from "react-icons/fa";
+import { IoIosRadio } from "react-icons/io";
+import { IoAlbumsOutline, IoCompassOutline, IoHomeOutline } from "react-icons/io5";
+import { LuMusic } from "react-icons/lu";
+import { RiCheckboxMultipleBlankLine } from "react-icons/ri";
+
+
+export default function App() {
+
+    const NavbarData = {
+        Menu: {
+            label: "Menu",
+            items: [
+                {
+                    title: "Home",
+                    path: "/",
+                    icon: <IoHomeOutline />,
+                },
+                {
+                    title: "Discover",
+                    path: "/Discover",
+                    icon: <IoCompassOutline />,
+                },
+                {
+                    title: "Browse",
+                    path: "/Browse",
+                    icon: <RiCheckboxMultipleBlankLine />,
+                },
+                {
+                    title: "Podcasts",
+                    path: "/Podcasts",
+                    icon: <CiMicrophoneOn />,
+                },
+                {
+                    title: "Radio",
+                    path: "/Radio",
+                    icon: <IoIosRadio />,
+                },
+            ],
+        },
+
+        Library: {
+            label: "Library",
+            items: [
+                {
+                    title: "Albums",
+                    path: "/Albums",
+                    icon: <IoAlbumsOutline />,
+                },
+                {
+                    title: "Songs",
+                    path: "/Songs",
+                    icon: <LuMusic />,
+                },
+                {
+                    title: "Artists",
+                    path: "/Artists",
+                    icon: <CiMicrophoneOn />,
+                },
+            ],
+        },
+    };
+
+
+    return (
+        <section>
+            <div>
+                <h1 className="flex gap-1 items-center text-3xl"><FaApple />Music</h1>
+                <div>
+                    <li className="text-xs text-gray-400">{NavbarData.Menu.label}</li>
+                    {NavbarData.Menu.items.map((item, e) => (
+                        <ul key={e}>
+                            <li className="flex items-center gap-2">{item.icon}{item.title}</li>
+                        </ul>
+                    ))}
+                    <li className="text-xs text-gray-400">{NavbarData.Library.label}</li>
+                    {NavbarData.Library.items.map((item, e) => (
+                        <ul key={e}>
+                            <li className="flex items-center gap-2">{item.icon}{item.title}</li>
+                        </ul>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
