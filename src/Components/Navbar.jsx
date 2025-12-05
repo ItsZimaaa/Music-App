@@ -62,19 +62,20 @@ export default function App() {
         },
     };
 
-
     return (
-        <section>
-            <div>
-                <h1 className="flex gap-1 items-center text-3xl"><FaApple />Music</h1>
-                <div>
-                    <li className="text-xs text-gray-400">{NavbarData.Menu.label}</li>
+        <section className="">
+            <div className="px-5 py-5">
+
+                <h1 className="flex gap-1 items-center text-4xl text-black-100 my-4"><FaApple />Music</h1>
+
+                <div className="flex flex-col gap-2">
+                    <li className="text-xs text-black-90">{NavbarData.Menu.label}</li>
                     {NavbarData.Menu.items.map((item, e) => (
                         <ul key={e}>
                             <li className="flex items-center gap-2">{item.icon}{item.title}</li>
                         </ul>
                     ))}
-                    <li className="text-xs text-gray-400">{NavbarData.Library.label}</li>
+                    <li className="text-xs text-black-90">{NavbarData.Library.label}</li>
                     {NavbarData.Library.items.map((item, e) => (
                         <ul key={e}>
                             <li className="flex items-center gap-2">{item.icon}{item.title}</li>

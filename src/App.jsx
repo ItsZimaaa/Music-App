@@ -6,10 +6,20 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <main className="grid grid-cols-[200px_1fr]  justify-between h-screen">
+          <div>
+            <Navbar />
+          </div>
+          <section className="">
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </section>
+
+          {/* <div className="">
+            <Navbar />
+          </div> */}
+        </main>
       </BrowserRouter>
     </>
   )
