@@ -12,13 +12,13 @@ const song = Object.keys(songsFiles).map((file, index) => {
     ? fileName.split("-")[0].trim()
     : "Unknown";
 
-  console.log(artist);
+  // console.log(artist);
 
   const title = fileName.includes("-")
     ? fileName.split("-")[1].trim()
     : fileName;
 
-  console.log(title);
+  // console.log(title);
 
   return {
     id: index + 1,
@@ -31,5 +31,5 @@ const song = Object.keys(songsFiles).map((file, index) => {
   };
 });
 
-console.log(song);
+// console.log(song);
 export default song;
