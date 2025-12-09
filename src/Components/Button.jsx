@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const Button = ({ text, children }) => {
-    return (
-        <StyledWrapper>
-            <button>
-                {text || children}
-            </button>
-        </StyledWrapper>
-    );
+  return (
+    <StyledWrapper>
+      <button className='active:scale-95'>
+        {text || children}
+      </button>
+    </StyledWrapper>
+  );
 };
 
 const StyledWrapper = styled.div`
