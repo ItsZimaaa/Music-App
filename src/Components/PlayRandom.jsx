@@ -7,7 +7,7 @@ import BlurText from "../Components/BlurText.jsx";
 export default function PlayRandom() {
     return (
         <section>
-            <div className="relative w-full h-[400px] overflow-hidden rounded-4xl">
+            <div className="relative w-full md:h-[350px] h-[200px] overflow-hidden rounded-4xl">
 
                 <video
                     autoPlay
@@ -20,9 +20,9 @@ export default function PlayRandom() {
                 </video>
                 <div className="absolute inset-0 bg-black-100/50" />
 
-                <div className="relative z-10 p-10 text-white w-full h-full flex flex-col justify-between">
+                <div className="relative z-10 md:p-10 p-4 text-white w-full h-full flex flex-col justify-between">
 
-                    <div className='flex justify-between items-start'>
+                    <div className='flex justify-between items-start text-sm'>
                         <h1>Artist</h1>
                         <span>
                             <h1>Monthly Listeners</h1>
@@ -30,16 +30,16 @@ export default function PlayRandom() {
                         </span>
                     </div>
 
-                    <div className='flex flex-col gap-10'>
+                    <div className='flex flex-col md:gap-10 gap-2'>
                         <div></div>
 
                         {/* <h1 className='text-7xl font-bold'>Top <br /> In Uzbekistan</h1> */}
                         <BlurText
-                            text="Top In Uzbekistan"
+                            text="Top In World"
                             delay={150}
                             animateBy="words"
                             direction="top"
-                            className="text-[100px] font-bold"
+                            className="md:text-[100px] text-4xl font-bold"
                         />
 
                         <div className='flex gap-2'>

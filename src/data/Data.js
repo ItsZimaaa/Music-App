@@ -6,7 +6,7 @@ const songsFiles = import.meta.glob("../songs/*.mp3", {
 const song = Object.keys(songsFiles).map((file, index) => {
   const fileName = file.split("/").pop().replace(".mp3", "");
 
-  console.log(fileName);
+  // console.log(fileName);
 
   const artist = fileName.includes("-")
     ? fileName.split("-")[0].trim()
@@ -18,18 +18,18 @@ const song = Object.keys(songsFiles).map((file, index) => {
     ? fileName.split("-")[1].trim()
     : fileName;
 
-  // console.log(title);
+  console.log(title);
 
   return {
     id: index + 1,
     title: title,
     artist: artist,
-    cover: "",
+    // cover: "",
     audio: songsFiles[file],
     duration: 0,
     playlistId: 1,
   };
 });
 
-// console.log(song);
+console.log(song);
 export default song;
